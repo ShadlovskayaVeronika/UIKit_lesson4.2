@@ -15,6 +15,13 @@
 		F496ED9926AEC4A000D232D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F496ED9726AEC4A000D232D3 /* LaunchScreen.storyboard */; };
 		F496EDA426AEC4A000D232D3 /* lesson4_2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F496EDA326AEC4A000D232D3 /* lesson4_2Tests.swift */; };
 		F496EDAF26AEC4A000D232D3 /* lesson4_2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F496EDAE26AEC4A000D232D3 /* lesson4_2UITests.swift */; };
+		F496EDC226AEC7E300D232D3 /* TableViewCellWithInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F496EDC026AEC7E300D232D3 /* TableViewCellWithInput.swift */; };
+		F496EDC326AEC7E300D232D3 /* TableViewCellWithInput.xib in Resources */ = {isa = PBXBuildFile; fileRef = F496EDC126AEC7E300D232D3 /* TableViewCellWithInput.xib */; };
+		F496EDC626AEC8EB00D232D3 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F496EDC526AEC8EB00D232D3 /* FooterView.swift */; };
+		F496EDC926AEC93500D232D3 /* SignInHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F496EDC826AEC93500D232D3 /* SignInHeader.swift */; };
+		F496EDCB26AECA1F00D232D3 /* BookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F496EDCA26AECA1F00D232D3 /* BookingViewController.swift */; };
+		F496EDCD26AECA9600D232D3 /* TableViewCellWithSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F496EDCC26AECA9600D232D3 /* TableViewCellWithSwitch.swift */; };
+		F496EDCF26AECAE400D232D3 /* CheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F496EDCE26AECAE400D232D3 /* CheckViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,13 @@
 		F496EDAA26AEC4A000D232D3 /* lesson4.2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lesson4.2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F496EDAE26AEC4A000D232D3 /* lesson4_2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lesson4_2UITests.swift; sourceTree = "<group>"; };
 		F496EDB026AEC4A000D232D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F496EDC026AEC7E300D232D3 /* TableViewCellWithInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellWithInput.swift; sourceTree = "<group>"; };
+		F496EDC126AEC7E300D232D3 /* TableViewCellWithInput.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCellWithInput.xib; sourceTree = "<group>"; };
+		F496EDC526AEC8EB00D232D3 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
+		F496EDC826AEC93500D232D3 /* SignInHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInHeader.swift; sourceTree = "<group>"; };
+		F496EDCA26AECA1F00D232D3 /* BookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingViewController.swift; sourceTree = "<group>"; };
+		F496EDCC26AECA9600D232D3 /* TableViewCellWithSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellWithSwitch.swift; sourceTree = "<group>"; };
+		F496EDCE26AECAE400D232D3 /* CheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +154,9 @@
 		F496EDBD26AEC4B400D232D3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F496ED9026AEC4A000D232D3 /* ViewController.swift */,
+				F496EDC726AEC91900D232D3 /* Headers */,
+				F496EDBF26AEC79700D232D3 /* Cells */,
+				F496EDC426AEC89B00D232D3 /* Footers */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -148,8 +164,37 @@
 		F496EDBE26AEC4B900D232D3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F496ED9026AEC4A000D232D3 /* ViewController.swift */,
+				F496EDCA26AECA1F00D232D3 /* BookingViewController.swift */,
+				F496EDCE26AECAE400D232D3 /* CheckViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		F496EDBF26AEC79700D232D3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F496EDC026AEC7E300D232D3 /* TableViewCellWithInput.swift */,
+				F496EDC126AEC7E300D232D3 /* TableViewCellWithInput.xib */,
+				F496EDCC26AECA9600D232D3 /* TableViewCellWithSwitch.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		F496EDC426AEC89B00D232D3 /* Footers */ = {
+			isa = PBXGroup;
+			children = (
+				F496EDC526AEC8EB00D232D3 /* FooterView.swift */,
+			);
+			path = Footers;
+			sourceTree = "<group>";
+		};
+		F496EDC726AEC91900D232D3 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				F496EDC826AEC93500D232D3 /* SignInHeader.swift */,
+			);
+			path = Headers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +302,7 @@
 			files = (
 				F496ED9926AEC4A000D232D3 /* LaunchScreen.storyboard in Resources */,
 				F496ED9626AEC4A000D232D3 /* Assets.xcassets in Resources */,
+				F496EDC326AEC7E300D232D3 /* TableViewCellWithInput.xib in Resources */,
 				F496ED9426AEC4A000D232D3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,7 +329,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F496ED9126AEC4A000D232D3 /* ViewController.swift in Sources */,
+				F496EDCD26AECA9600D232D3 /* TableViewCellWithSwitch.swift in Sources */,
 				F496ED8D26AEC4A000D232D3 /* AppDelegate.swift in Sources */,
+				F496EDC226AEC7E300D232D3 /* TableViewCellWithInput.swift in Sources */,
+				F496EDC626AEC8EB00D232D3 /* FooterView.swift in Sources */,
+				F496EDC926AEC93500D232D3 /* SignInHeader.swift in Sources */,
+				F496EDCF26AECAE400D232D3 /* CheckViewController.swift in Sources */,
+				F496EDCB26AECA1F00D232D3 /* BookingViewController.swift in Sources */,
 				F496ED8F26AEC4A000D232D3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
