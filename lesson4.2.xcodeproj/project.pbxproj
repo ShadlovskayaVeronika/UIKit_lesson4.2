@@ -99,9 +99,11 @@
 		F496ED8B26AEC4A000D232D3 /* lesson4.2 */ = {
 			isa = PBXGroup;
 			children = (
+				F496EDBE26AEC4B900D232D3 /* Controller */,
+				F496EDBD26AEC4B400D232D3 /* View */,
+				F496EDBC26AEC4AF00D232D3 /* Model */,
 				F496ED8C26AEC4A000D232D3 /* AppDelegate.swift */,
 				F496ED8E26AEC4A000D232D3 /* SceneDelegate.swift */,
-				F496ED9026AEC4A000D232D3 /* ViewController.swift */,
 				F496ED9226AEC4A000D232D3 /* Main.storyboard */,
 				F496ED9526AEC4A000D232D3 /* Assets.xcassets */,
 				F496ED9726AEC4A000D232D3 /* LaunchScreen.storyboard */,
@@ -126,6 +128,28 @@
 				F496EDB026AEC4A000D232D3 /* Info.plist */,
 			);
 			path = lesson4.2UITests;
+			sourceTree = "<group>";
+		};
+		F496EDBC26AEC4AF00D232D3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F496EDBD26AEC4B400D232D3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F496ED9026AEC4A000D232D3 /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F496EDBE26AEC4B900D232D3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
