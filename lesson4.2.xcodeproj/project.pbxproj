@@ -22,6 +22,8 @@
 		F496EDCB26AECA1F00D232D3 /* BookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F496EDCA26AECA1F00D232D3 /* BookingViewController.swift */; };
 		F496EDCD26AECA9600D232D3 /* TableViewCellWithSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F496EDCC26AECA9600D232D3 /* TableViewCellWithSwitch.swift */; };
 		F496EDCF26AECAE400D232D3 /* CheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F496EDCE26AECAE400D232D3 /* CheckViewController.swift */; };
+		F496EDD126AECC6700D232D3 /* CellWithMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F496EDD026AECC6700D232D3 /* CellWithMenuItem.swift */; };
+		F496EDD326AECCDC00D232D3 /* CheckFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F496EDD226AECCDC00D232D3 /* CheckFooterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		F496EDCA26AECA1F00D232D3 /* BookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingViewController.swift; sourceTree = "<group>"; };
 		F496EDCC26AECA9600D232D3 /* TableViewCellWithSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellWithSwitch.swift; sourceTree = "<group>"; };
 		F496EDCE26AECAE400D232D3 /* CheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckViewController.swift; sourceTree = "<group>"; };
+		F496EDD026AECC6700D232D3 /* CellWithMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellWithMenuItem.swift; sourceTree = "<group>"; };
+		F496EDD226AECCDC00D232D3 /* CheckFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckFooterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +181,7 @@
 				F496EDC026AEC7E300D232D3 /* TableViewCellWithInput.swift */,
 				F496EDC126AEC7E300D232D3 /* TableViewCellWithInput.xib */,
 				F496EDCC26AECA9600D232D3 /* TableViewCellWithSwitch.swift */,
+				F496EDD026AECC6700D232D3 /* CellWithMenuItem.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -185,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				F496EDC526AEC8EB00D232D3 /* FooterView.swift */,
+				F496EDD226AECCDC00D232D3 /* CheckFooterView.swift */,
 			);
 			path = Footers;
 			sourceTree = "<group>";
@@ -329,9 +335,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F496ED9126AEC4A000D232D3 /* ViewController.swift in Sources */,
+				F496EDD126AECC6700D232D3 /* CellWithMenuItem.swift in Sources */,
 				F496EDCD26AECA9600D232D3 /* TableViewCellWithSwitch.swift in Sources */,
 				F496ED8D26AEC4A000D232D3 /* AppDelegate.swift in Sources */,
 				F496EDC226AEC7E300D232D3 /* TableViewCellWithInput.swift in Sources */,
+				F496EDD326AECCDC00D232D3 /* CheckFooterView.swift in Sources */,
 				F496EDC626AEC8EB00D232D3 /* FooterView.swift in Sources */,
 				F496EDC926AEC93500D232D3 /* SignInHeader.swift in Sources */,
 				F496EDCF26AECAE400D232D3 /* CheckViewController.swift in Sources */,
