@@ -13,7 +13,6 @@ class SignInHeader: UITableViewHeaderFooterView {
         let label = UILabel()
         label.font = .systemFont(ofSize: 40)
         label.textAlignment = .left
-        label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = UIColor(red: 1, green: 0.5, blue: 0.5, alpha: 1)
         return label
@@ -33,7 +32,6 @@ class SignInHeader: UITableViewHeaderFooterView {
         contentView.addSubview(title)
         contentView.addSubview(imageView)
 
-        //constraints
         NSLayoutConstraint.activate([
             imageView.widthAnchor.constraint(equalToConstant: 200),
             imageView.heightAnchor.constraint(equalToConstant: 200),

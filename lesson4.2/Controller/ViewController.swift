@@ -10,16 +10,17 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    let cells: [CellType] = Helper.app.signInCells
    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Cafe"
+        self.title = "Кафе".localized()
         
         tableView.dataSource = self
         tableView.delegate = self
         
-        let cellWithInput = UINib(nibName: "TableViewCellWithInput", bundle: nil)
+        let cellWithInput = UINib(nibName: TableViewCellWithInput.className, bundle: nil)
         tableView.register(cellWithInput, forCellReuseIdentifier: "cellWithInput")
         tableView.register(FooterView.self, forHeaderFooterViewReuseIdentifier: "signInFooter")
         
@@ -29,29 +30,23 @@ class ViewController: UIViewController {
         tableView.sectionFooterHeight = 200
         tableView.rowHeight = 80
     }
-    
-    enum CellType{
-        case email(String)
-        case password(String)
-    }
-    let cells: [CellType] = [.email("email"), .password("пароль")]
 }
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return cells.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellWithInput", for: indexPath) as! TableViewCellWithInput
        
-        switch cells[indexPath.item]{
-        case .email(let labelText):
-            cell.commonInit(labelText: labelText, placeholderText: "email")
-        case .password(let labelText):
-            cell.commonInit(labelText: labelText, placeholderText: "пароль", textFieldIsSecure: true)
-
+        guard case .inputCell(let labelText, let placeholder) = cells[indexPath.item] else{
+            return cell
+        }
+        cell.label.text = labelText.localized()
+        cell.textField.placeholder = placeholder.localized()
+        if labelText == "Пароль" {
+            cell.textField.isSecureTextEntry = true
         }
         return cell
     }
@@ -59,7 +54,7 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let view = tableView.dequeueReusableHeaderFooterView(withIdentifier:
                       "signInFooter") as! FooterView
-        view.button.setTitle("Войти", for: .normal)
+        view.button.setTitle("Войти".localized(), for: .normal)
         view.button.addTarget(
             self,
             action: #selector(buttonTapped(_:)),
