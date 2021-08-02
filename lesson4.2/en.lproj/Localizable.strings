@@ -1,0 +1,16 @@
+"Кафе" = "Cafe";
+"Пароль" = "Password";
+"Войти" = "Sign In";
+"Бронирование" = "Booking";
+"Выдать чек" = "Bill";
+"Чек" = "Bill";
+"Выставить чек?" = "Bill?";
+"Отмена" = "Cancel";
+"ФИО" = "Name";
+"Введите фио" = "Enter your name";
+"Количество гостей" = "Number of guests";
+"Введите количество" = "Enter number";
+"Номер стола" = "Table number";
+"Бронировали стол?" = "Booked a table?";
+"Предоплата?" = "Prepayment?";
+"VIP комната?" = "VIP room?";
