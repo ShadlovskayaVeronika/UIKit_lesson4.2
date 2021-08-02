@@ -26,3 +26,4 @@ class TableViewCellWithInput: UITableViewCell {
         textField.placeholder = placeholderText
     }
 }
+

@@ -9,17 +9,15 @@ import UIKit
 
 class BookingViewController: UITableViewController {
 
+    let cells = Helper.app.bookingCells
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.title = "Бронирование"
-        // Uncomment the following line to preserve selection between presentations
+       
+        self.title = "Бронирование".localized()
         self.clearsSelectionOnViewWillAppear = false
-        let cellWithInput = UINib(nibName: "TableViewCellWithInput", bundle: nil)
-        tableView.register(cellWithInput, forCellReuseIdentifier: "cellWithInput")
-        tableView.register(TableViewCellWithSwitch.self, forCellReuseIdentifier: "cellWithSwitch")
-        tableView.register(FooterView.self, forHeaderFooterViewReuseIdentifier: "footer")
-
+        
+        registerCells()
 
         tableView.sectionFooterHeight = 200
         tableView.separatorStyle = .none
@@ -27,20 +25,20 @@ class BookingViewController: UITableViewController {
         tableView.rowHeight = 70
     }
     
-    enum CellType {
-        case inputCell(String, String)
-        case switchCell(String)
+    func registerCells() {
+        let cellWithInput = UINib(nibName: TableViewCellWithInput.className, bundle: nil)
+       
+        tableView.register(cellWithInput, forCellReuseIdentifier: "cellWithInput")
+        tableView.register(TableViewCellWithSwitch.self, forCellReuseIdentifier: "cellWithSwitch")
+        tableView.register(FooterView.self, forHeaderFooterViewReuseIdentifier: "footer")
     }
     
-    let cells: [CellType] = [.inputCell("ФИО", "Введите фио"), .inputCell("Количество гостей", "Введите количество"),
-                             .inputCell("Номер стола", "Стол номер"), .switchCell("Бронировали стол?"),
-                             .switchCell("Предоплата?"), .switchCell("VIP комната?")]
 
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let view = tableView.dequeueReusableHeaderFooterView(withIdentifier:
                       "footer") as! FooterView
-        view.button.setTitle("Выдать чек", for: .normal)
+        view.button.setTitle("Выдать чек".localized(), for: .normal)
         view.button.addTarget(
             self,
             action: #selector(buttonTapped(_:)),
@@ -56,26 +54,24 @@ class BookingViewController: UITableViewController {
         switch cells[indexPath.item]{
         case .inputCell(let labelText, let placeholder):
             let cell = tableView.dequeueReusableCell(withIdentifier: "cellWithInput", for: indexPath) as! TableViewCellWithInput
-            cell.commonInit(labelText: labelText, placeholderText: placeholder)
+            cell.commonInit(labelText: labelText.localized(), placeholderText: placeholder.localized())
             return cell
         case .switchCell(let labelText):
             let cell = tableView.dequeueReusableCell(withIdentifier: "cellWithSwitch", for: indexPath) as! TableViewCellWithSwitch
-            cell.commonInit(labelText: labelText)
+            cell.commonInit(labelText: labelText.localized())
             return cell
         }
     }
     
     @IBAction func buttonTapped(_ sender: UIButton) {
-        let alert = UIAlertController(title: "Выставить чек?", message: "", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Выставить чек?".localized(), message: "", preferredStyle: .alert)
 
-        alert.addAction(UIAlertAction(title: "Чек", style: .default, handler: { (action: UIAlertAction!) in
+        alert.addAction(UIAlertAction(title: "Чек".localized(), style: .default, handler: { (action: UIAlertAction!) in
             let vc = CheckViewController()
             self.navigationController?.pushViewController(vc, animated: true)
         }))
 
-        alert.addAction(UIAlertAction(title: "Отмена", style: .cancel, handler: { (action: UIAlertAction!) in
-              print("Handle Cancel Logic here")
-        }))
+        alert.addAction(UIAlertAction(title: "Отмена".localized(), style: .cancel, handler: { _ in }))
         
         present(alert, animated: true, completion: nil)
     }

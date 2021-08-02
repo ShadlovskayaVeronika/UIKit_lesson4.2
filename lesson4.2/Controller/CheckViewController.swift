@@ -9,35 +9,31 @@ import UIKit
 
 class CheckViewController: UITableViewController {
 
+    let menuItems = Helper.app.defaultMenuItems
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
         self.clearsSelectionOnViewWillAppear = false
         
         tableView.register(CellWithMenuItem.self, forCellReuseIdentifier: "cellWithMenuItem")
         tableView.register(CheckFooterView.self, forHeaderFooterViewReuseIdentifier: "checkFooter")
         tableView.rowHeight = 80
         tableView.sectionFooterHeight = 200
-        
     }
-    
-    var selectedMenuItems: [(String, String, Int)] =
-        [("Салат Греческий", "Помидор, салат айсберг, сухарики, курица", 400),
-        ("Салат Цезарь", "Помидор, салат, курица, сухарики", 300)]
 
+    
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return selectedMenuItems.count
+        return menuItems.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellWithMenuItem", for: indexPath) as! CellWithMenuItem
-        let (name, ingridients, price) = selectedMenuItems[indexPath.item]
-        
-        
-        cell.commonInit(itemName: name, ingridients: ingridients, price: price)
+       
+        let item = menuItems[indexPath.item]
+        cell.commonInit(menuItem: item)
         return cell
     }
     
@@ -45,8 +41,8 @@ class CheckViewController: UITableViewController {
         let footer = tableView.dequeueReusableHeaderFooterView(withIdentifier:
                       "checkFooter") as! CheckFooterView
         var price = 0
-        for item in selectedMenuItems{
-            price += item.2
+        for item in menuItems{
+            price += item.price
         }
         
         footer.commonInit(labelText: "\(price) р.")
